@@ -2,11 +2,12 @@ package org.launchcode.techjobs.persistent.models;
 
 import javax.persistence.Entity;
 import javax.validation.constraints.Max;
+import javax.validation.constraints.Size;
 
 @Entity
 public class Skill extends AbstractEntity {
 
-    @Max(255)
+    @Size(max=255)
     private String description;
 
     public Skill() {

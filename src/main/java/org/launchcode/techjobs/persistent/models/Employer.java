@@ -2,11 +2,12 @@ package org.launchcode.techjobs.persistent.models;
 
 import javax.persistence.Entity;
 import javax.validation.constraints.Max;
+import javax.validation.constraints.Size;
 
 @Entity
 public class Employer extends AbstractEntity {
 
-    @Max(50)
+    @Size(max=50)
     private String location;
 
     public Employer() {
