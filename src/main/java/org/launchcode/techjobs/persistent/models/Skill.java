@@ -1,6 +1,7 @@
 package org.launchcode.techjobs.persistent.models;
 
 import javax.persistence.Entity;
+import javax.persistence.JoinColumn;
 import javax.persistence.ManyToMany;
 import javax.persistence.ManyToOne;
 import javax.validation.constraints.Max;
@@ -18,6 +19,10 @@ public class Skill extends AbstractEntity {
     private String description;
 
     public Skill() {
+    }
+
+    public List<Job> getJobs() {
+        return jobs;
     }
 
     public String getDescription() {
